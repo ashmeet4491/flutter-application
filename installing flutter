@@ -1,0 +1,36 @@
+make the src folder in the c drive 
+go to the command prompt and then copy the git link of flutter
+now using flutter doctor download the Dart
+The maih base of the flutter application is widget
+everything inside the flutter app is essentially a fluttehat.
+Root widget is that widget that surrounds  everything inside the widgets
+there can be app bar widget or there can be a app bar widget or a text widget
+like for example one widget is nested inside the other widget
+we also have a container widget and also have a text widget
+The flutter application has many properties which is going to tell us how the app is going to look on a screen.
+here we will be using dart programming language which is basically developed by google
+https://dartpad.dev/
+this is a compiler for dart programming language 
+Dart is a programming language in which it is statically typed
+means that if it is declared then its type cant be changed.
+
+void main() {
+ int a=10;
+  print(a);
+  
+}
+
+//this is invalid
+void main() {
+ String a='abc';
+  a=10;
+  print(a);
+}
+//this is valid
+void main() {
+ String a='abc';
+  a='jen';
+  print(a);
+}
+
+
