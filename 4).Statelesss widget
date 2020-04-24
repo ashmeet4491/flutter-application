@@ -1,0 +1,39 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+  home:test()
+));
+class test extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Planning_poker'),
+        centerTitle: true,
+        backgroundColor: Colors.red[600],
+      ),
+      body:Center
+        (
+        child: Text(
+          'hello ninjas',
+          style: TextStyle(
+            fontSize: 20.0,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 2.0,
+            color: Colors.grey[600],
+            fontFamily: 'Indie',
+          ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Text('click me once'),
+        onPressed: (){},
+        backgroundColor: Colors.pinkAccent[100],
+      ),
+    );
+  }
+}
+
+
+
+
