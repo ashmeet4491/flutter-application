@@ -1,0 +1,37 @@
+One of the most itrics mportant thing about containers is that it restrics to its child elements 
+we can also add margin and padding to it
+Padding is an inside space of an element
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp
+  (
+  home:test()
+
+));
+
+class test extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+     appBar: AppBar(
+     title: Text('Planing Poker'),
+     centerTitle: true,
+     backgroundColor: Colors.lime[100],
+
+
+     ),
+     body: Container
+       (
+       padding: EdgeInsets.all(20.0),
+       color: Colors.grey,
+       child:Text('This app'),
+
+     ),
+     floatingActionButton: FloatingActionButton(
+     child: Text('Click me'),
+     onPressed: (){},
+     backgroundColor: Colors.pinkAccent[100],
+     ),
+     );
+  }
+}
