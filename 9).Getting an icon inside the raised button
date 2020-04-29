@@ -1,0 +1,40 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp
+  (
+  home:test()
+
+));
+
+class test extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+     appBar: AppBar(
+     title: Text('Planing Poker'),
+     centerTitle: true,
+     backgroundColor: Colors.lime[100],
+
+
+     ),
+     body: Center(
+     child: RaisedButton.icon
+       (
+       onPressed: (){},
+       icon: Icon(
+         Icons.mail
+       ),
+       label: Text('click for mail'),
+       color: Colors.amberAccent[100],
+
+
+       ),
+     ),
+     floatingActionButton: FloatingActionButton(
+     child: Text('Click me'),
+     onPressed: (){},
+     backgroundColor: Colors.pinkAccent[100],
+     ),
+     );
+  }
+}
