@@ -1,0 +1,50 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp
+  (
+  home:test()
+
+));
+
+class test extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+     appBar: AppBar(
+     title: Text('Planing Poker'),
+     centerTitle: true,
+     backgroundColor: Colors.lime[100],
+
+
+     ),
+     body: Row
+       (
+       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Text('planning poker'),
+        FlatButton(
+          onPressed: (){},
+          color:Colors.lime,
+          child:Text('planning poker'),
+        ),
+        Container(
+           color: Colors.pinkAccent,
+         // margin: EdgeInsets.all(30),
+          padding:EdgeInsets.all(20),
+          child:Text('planning poker'),
+
+        )
+
+      ],
+
+
+      ),
+     floatingActionButton: FloatingActionButton(
+     child: Text('Click me'),
+     onPressed: (){},
+     backgroundColor: Colors.pinkAccent[100],
+     ),
+     );
+  }
+}
