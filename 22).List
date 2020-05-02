@@ -1,0 +1,45 @@
+import 'package:flutter/material.dart';
+
+void main() =>
+  runApp(MaterialApp(
+    home:Test(),
+  ));
+
+class Test extends StatefulWidget {
+  @override
+  _TestState createState() => _TestState();
+}
+
+class _TestState extends State<Test> {
+  List<String>quotes=[
+    'Love For All, Hatred For None',
+    'Change the world by being yourself.',
+    'Every moment is a fresh beginning',
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold
+      (
+      appBar: AppBar(
+        title: Text('Awesome quotes'
+        ,
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+        backgroundColor: Colors.redAccent,
+        centerTitle: true,
+      ),
+      body:Column
+        (
+      children: quotes.map((quote)
+      {
+        return Text(quote);
+      }).toList(),
+
+      ),
+
+    );
+  }
+}
+
