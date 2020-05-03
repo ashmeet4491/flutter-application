@@ -1,0 +1,82 @@
+main.dart file
+import 'package:flutter/material.dart';
+import 'quotes.dart';
+void main() =>
+  runApp(MaterialApp(
+    home:Test(),
+  ));
+
+class Test extends StatefulWidget {
+  @override
+  _TestState createState() => _TestState();
+}
+
+class _TestState extends State<Test> {
+  List<Quote>quotes=[
+    Quote(text:'Love For All, Hatred For None',author:'abc'),
+    Quote(text:'Change the world by being yourself',author:'def'),
+    Quote(text:'Every moment is a fresh beginning',author:'mno'),
+  ];
+  Widget quoteTemplate(quote)
+  {
+    return  Card(
+margin: EdgeInsets.all(16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text(
+            quote.text,
+            style: TextStyle(
+              fontSize: 14.0,
+              color:Colors.grey,
+            ),
+          ),
+          SizedBox(height: 6.0,),
+          Text(
+            quote.author,
+            style: TextStyle(
+              fontSize: 14.0,
+              color:Colors.grey[800],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold
+      (
+      appBar: AppBar(
+        title: Text('Awesome quotes'
+        ,
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+        backgroundColor: Colors.redAccent,
+        centerTitle: true,
+      ),
+      body:Column
+        (
+      children: quotes.map((quote)
+      =>
+       quoteTemplate(quote)
+      ).toList(),
+
+      ),
+
+    );
+  }
+}
+
+
+2nd file-
+class Quote
+{
+  String text;
+  String author;
+  Quote({this.text,this.author});
+
+
+}
